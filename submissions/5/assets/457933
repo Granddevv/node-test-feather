@@ -1,0 +1,170 @@
+
+
+// <![CDATA[
+// X-H: cmp-adserver04.adcloud-prod.us-west-2.private
+function adLoader_YT8gxQAAAWf5ICTq() {
+
+                var fireBeacon = function(url) {
+            try {
+                if(url && url != "null" && url != "undefined"){
+                    var timeStamp = new Date().getTime() + "";
+                    var beacon = url.replace("[timestamp]", timeStamp);//TODO double check macro.
+                    var bImage = new Image();
+                    bImage.src = beacon;
+                }
+            } catch(e){
+            }
+        }
+
+        var executeClientJS = function() {
+            var cJS = '';
+            if (cJS) {
+                var adDiv = document.getElementById("x2_YT8gxQAAAWf5ICTq");
+                var width="1";
+                var height="1";
+                createIFrame(adDiv, "x2_cjs_x2_YT8gxQAAAWf5ICTq", width, height, "", cJS);
+            }
+        }
+
+        var fire3rdPartyImpBeacons = function() {
+            var impBeaconsArr = [];
+            if (impBeaconsArr) {
+                for (var i = 0; i < impBeaconsArr.length; i++) {
+                    fireBeacon(impBeaconsArr[i]);
+                }
+            }
+        }
+
+        var fire3rdPartyClkBeacons = function() {
+            var clkBeaconsArr = [];
+            if (clkBeaconsArr) {
+                for (var i = 0; i < clkBeaconsArr.length; i++) {
+                    fireBeacon(clkBeaconsArr[i]);
+                }
+            }
+        }
+
+        
+        var encode = function(url) {
+            var arr;
+            var re_unenc=/\${lp_url}/;
+            var re_enc=/\${lp_url_enc_(\d+)}/;
+            if (arr=url.match(re_unenc)) {
+                url = encode(url.substring(0,arr["index"])) + arr[0] + encode(url.substring(arr["index"] + arr[0].length));
+                return url.replace(re_unenc,"${lp_url_enc_1}");
+            } else if (arr=url.match(re_enc)) {
+                url = encode(url.substring(0,arr["index"])) + arr[0] + encode(url.substring(arr["index"] + arr[0].length));
+                return url.replace(re_enc,"\${lp_url_enc_" + (Number(arr[1]) + 1) + "}");
+            } else {
+                return encodeURIComponent(url);
+            }
+        }
+        
+
+                    var getClickUrl = function(url) {
+                                    return "//statsf-tm.everesttech.net/stats/1/ct?cmpo=t&cmpe=H4sIAAAAAAAAAAHQAC__rc1jf5iTh6u1Hod8VknynkfaO4jK9WkArXZPzCbjRrHS_VSr9lpV_M9TdHLicgEWHD03TfeDKfbSOBCdL0HASxRpXe7ajbsMMLOz8kEKGWmmhvEQaHQIN2U4hU4O4ii_9RBmdzmNMpEF3C_h23GvtBn-R2NbNs-z1SVzSVJsQknokz8dKYL0leTuBYYhAkwZzAQoTZ6PnQdnSShtx3G0TLWO3zjYRjcuhAT0O1MhTbL5Z4BroENv5i6TZpHbNqltc43zaWUhoFBCB2coJapN6E314WPQAAAA&redir=" + encode("https://adclick.g.doubleclick.net/pcs/click?xai=AKAOjssn5bJ4jV_lY-YhWVpp8lRDHcYHiBdI7NjwrJZQwxW4mZwX-wmYS-dqxVZTHm0Xs1Thox8R_QSKc0XjPDAMblyeld1-qY7GOIQ5TTKdqcubYmbYWYfafn2pwFdpPgpaeHcnZvkc9AlYdanl91YNdy_iOQeyhd_OIe2LQDrbWZyLUISG6Wvx6pnVjIDM21lJD3MD9ql5SZg-d4M6-lWK_WI13vVThWE9Dcqmezt6iWPnJx8h_0czi7-cfe6lDmiO_J0VFyKFkzef31oe0RHNxUmyqwgpign95gWX0bymINpSyCHAMjmJBtrSeakn_aMPzzbJ5-_IuhRsZIj6fEjuMjq0cE--gt3aVxG_G_69NZPK9JZbOfe3NaRnOzLHADKV-0mgHMIS8I7eeJPwDjCA9mjg7wbfvlSyoI4vQYVxfu-Bz0WlcRitEl1OIsqjENv8QZnpPoh6uz0O8sh9iN2DTyZOF3CnYa4XgGbJLMO844vV08WliZvN-R9dktREHyqMMPv9KCcIdO-GUAcKLLR4UaNUWoTGaWUo-lomyCAM4dSohuZxOjf_l0O9JeyePGASQclr3ABZG8bQ5MMVm9lvT3eApZ3oVB_bHzY5oaca7BwJOc3XQZWzfl6sxbkdqnx_d-rha74pwNCTVdhr6UGz9FWuUchsKWnsoCC8Mb82E9dvCoXIx3ZX7pKQCx3dry6hr6Kp7_tN82RUkp3U36d_koJZupFZYpQJU4z4toFLNzd_85dpRiS24nZD4H2Oa5xpnQ2GhwfcBbz0fhG8vJykHLiQBTgS0nIwaIBSrsVSjPhlzZvxlVUJJZjiAfZuAzxB5MNgjWbA9TGtZTdeLHmo53Y4SkxYVMLp5oRXuy-Iey_mfFFFb3ySUVMl21AnLeVQpzg98qobMFrgankEYVRPLI8lKF-cURYb8r4rnc7XBI44nFPDJ0thePun1FNlUzLelh9T0tXL9RrnkrwHqLjbCMFPiNQgKi8yxGiEVvSoii9A1JpBeq_xrUvI_t_nWZCnnh5t6F-KqC2RRCvkRrC7ibfd7_Q-Pcvs4wtfjGEScCg8DlTnzrcOGmU0oXxHmKFbqsgxZemDcxVy7oaVbg4nygMt1LJAi4v3r1BBqCyJBoA4ZsM5_HhW&sai=AMfl-YSzr4Gv4akyBIaIEU5z56QvzsnwXuYO2FqccU6RKbIBktdmPoTaVzAeTCrGlIKFyJSEjTbeoTEmgQQ6cLzuVaSuS2xNgJxq9K2p_x6UVzJwa4I-z__Zpql6_47jhtk9371HqKHQcWr0PRc5RxW94KxjftTwVZg7fC31NR5WwyujXgVpsaQJ1BMChxAK-WWvOKG9miMy7mEsAzUBBXYtNMNqs-i73O0_-AJEgbbOzvV1Pu1Gh8QIEhSXSd24yua0_tjQV6vapMqadptKu_x42M1yDd8ygQE3_IE43s5lEzykdwpkojuyQrmNOuUz8Yirn3oLA2wT4y62ZyDvp-AFP1c89qHqxuIvriOV6GrwfTGmBg&sig=Cg0ArKJSzGoz0x3V46q5EAE&fbs_aeid=[gw_fbsaeid]&urlfix=1&adurl=" + encode(url));
+                            }
+
+            var handleStats = function() {
+                                    fireBeacon("//statsf-tm.everesttech.net/stats/1/imp?cmpo=t&cmpe=H4sIAAAAAAAAAAHQAC__rc1jf5iTh6u1Hod8VknynkfaO4jK9WkArXZPzCbjRrHS_VSr9lpV_M9TdHLicgEWHD03TfeDKfbSOBCdL0HASxRpXe7ajbsMMLOz8kEKGWmmhvEQaHQIN2U4hU4O4ii_9RBmdzmNMpEF3C_h23GvtBn-R2NbNs-z1SVzSVJsQknokz8dKYL0leTuBYYhAkwZzAQoTZ6PnQdnSShtx3G0TLWO3zjYRjcuhAT0O1MhTbL5Z4BroENv5i6TZpHbNqltc43zaWUhoFBCB2coJapN6E314WPQAAAA");
+                                adLoader_inst_YT8gxQAAAWf5ICTq.loadAd();
+            }
+
+            var notifyClick = function() {}
+            
+
+    var createDiv = function (id, styleString, parentDiv) {
+        var newDiv = document.createElement("div");
+        newDiv.setAttribute("id", id);
+        if (styleString && styleString != "") {
+            newDiv.setAttribute("style", styleString);
+        }
+        if (parentDiv) {
+            parentDiv.appendChild(newDiv);
+        }
+        return newDiv;
+    }
+
+    var createIFrame = function(div, frmId, width, height, frmSrc, frmContent, callBackFn) {
+         if(callBackFn && callBackFn != "") {
+            window.addEventListener("message",callBackFn, false);
+         }
+         var frm = document.getElementById(frmId);
+         if (!frm) {
+             frm = document.createElement("IFRAME");
+             frm.setAttribute("id",frmId);
+             frm.style.border= "0";
+             frm.style.postion="relative";
+             frm.style.top="0px";
+             frm.style.left="0px";
+             frm.style.width= width + "px";
+             frm.style.height= height + "px";
+             frm.style.margin="0px";
+             frm.setAttribute("frameborder","0");
+             frm.setAttribute("scrolling","no");
+             if ('allowTransparency' in frm) {
+                frm.allowTransparency = true;
+             }
+             div.appendChild(frm);
+             if(frmSrc && frmSrc != "") {
+                 frm.src=frmSrc;
+             } else if(frmContent && frmContent != "") {
+                 try {
+                    frm.contentWindow.document.write("<html><head/><body style=\"margin:0px;background-color:transparent;\">" + frmContent + "</body></html>");
+                    frm.contentWindow.document.close();
+                 } catch(e) {}
+
+             }
+         }
+         return frm;
+    }
+
+    var insertDivs = function () {
+        var parent = createDiv("x2_YT8gxQAAAWf5ICTq", "height:600px;width:300px;margin:0 auto;");
+        if (document.currentScript) {
+            var pn = document.currentScript.parentNode;
+            var sbn = document.currentScript.nextSibling;
+            if (sbn) {
+                pn.insertBefore(parent, sbn);
+            } else {
+                pn.appendChild(parent);
+            }
+        } else {
+            document.body.appendChild(parent);
+        }
+    }
+
+    var loadAdDiv = function () {
+        if (document.readyState === "complete") {
+            insertDivs();
+        } else {
+            try {
+                document.write('<div id="x2_YT8gxQAAAWf5ICTq" style="height:600px;width:300px;margin:0 auto;"></div>');
+                document.close();
+            } catch(e) {}
+        }
+    }
+
+    this.loadAd = function () {
+        fire3rdPartyImpBeacons();
+        loadAdDiv();
+        executeClientJS();
+        var adDiv = document.getElementById("x2_YT8gxQAAAWf5ICTq");
+        var tpt = '<iframe width="300" height="600" scrolling="no" frameborder="0" allowtransparency="true" hspace="0" vspace="0" marginwidth="0" marginheight="0" style="margin:0px;" src="https://ads.everesttech.net/ads/mti/20744/4249?CLK_TR=${TM_CLICK_URL_URLENC}&CMP_ID=25947223&PLCMT_ID=305936323&AD_ID=499653233&FEED_ID=${TM_FEED_ID_NUM}&Placement_ID=305936323&cachebuster=1631527168&TC_1=2200008&TC_2=25947223&TC_3=305936323&TC_4=137839728&TC_5=dcmadvertiserid|8404942$dcmcampaignid|25947223$dcmadid|499653233$dcmrenderingid|138000852$dcmsiteid|6958819$dcmplacementid|305936323$customer|Microsoft$dv360auctionid|"></iframe>';
+        tpt = tpt.replace("${TM_CLICK_URL_URLENC}",encodeURIComponent(getClickUrl("")));
+        createIFrame(adDiv, "x2_ad_x2_YT8gxQAAAWf5ICTq", "300", "600", "", tpt);
+        // adDiv.innerHTML = tpt;
+    }
+
+    this.init = function () {
+        handleStats();
+    }
+
+};
+try {
+    var adLoader_inst_YT8gxQAAAWf5ICTq = new adLoader_YT8gxQAAAWf5ICTq();
+    adLoader_inst_YT8gxQAAAWf5ICTq.init();
+} catch(e) {
+    console.log(e.message);
+}
+// ]]>
